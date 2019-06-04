@@ -1,3 +1,5 @@
+package com.tk.polynomial;
+
 public class Term implements Comparable {
     private int coefficient;
     private int power;

@@ -1,3 +1,7 @@
+package com.tk.approximation;
+
+import com.tk.polynomial.Polynomial;
+
 public class PolySolver {
     public double findRoot(Polynomial polynomial, int xMin, int xMax, int accuracy) {
         double root = 0;
@@ -19,5 +23,10 @@ public class PolySolver {
         }
 
         return root;
+    }
+
+    public double findIntercept(Polynomial p1, Polynomial p2, int xMin, int xMax, int accuracy) {
+        Polynomial polynomial = p1.subtract(p2);
+        return findRoot(polynomial, xMin, xMax, accuracy);
     }
 }
